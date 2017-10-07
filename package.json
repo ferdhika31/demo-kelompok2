@@ -1,0 +1,27 @@
+{
+  "name": "demo-kelompok2",
+  "version": "1.0.0",
+  "description": "Demo HTML 5 Kelompok 2 Web Dev",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ferdhika31/demo-kelompok2.git"
+  },
+  "keywords": [
+    "Demo HTML 5",
+    "POLBAN",
+    "WebDev"
+  ],
+  "author": "Ferdhika Yudira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferdhika31/demo-kelompok2/issues"
+  },
+  "homepage": "https://github.com/ferdhika31/demo-kelompok2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2"
+  }
+}

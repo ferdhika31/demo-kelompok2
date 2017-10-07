@@ -1,0 +1,29 @@
+<script>
+var x = document.getElementById("res");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position){
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        });
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+</script>
+
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--12-col">
+        
+        <h2 class="mdl-card__title-text">Geo Location</h2>
+
+        <hr>
+
+        <p>Ambil kordinat lokasi browser</p>
+        <button onclick="getLocation()">Ambil Kordinat</button>
+
+        <p id="res"></p>
+
+	</div>
+</div>

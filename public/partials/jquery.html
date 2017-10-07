@@ -1,0 +1,116 @@
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--12-col">
+        
+        <h2 class="mdl-card__title-text">jQuery</h2>
+
+        <hr>
+
+		<div class="mdl-grid">
+			<!-- jQuery Selector -->
+			<script type="text/javascript">
+				$(document).ready(function () {
+					
+					/*$('button').css('background', '#65a9d7').css('margin', '25px');
+					
+					$('button#buttonone').css('font-weight', 'bold');
+							
+					$('.stylebeta').css('border', '3px solid #96d1f8');
+					
+					$('#buttontwo').css('font-family','Georgia');
+					
+					$('button.stylealpha').css('border-radius','5px');*/
+					
+				});
+			</script>
+            <div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">jQuery Selector</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <button id="buttonone" class="stylealpha">Style Me</button>
+						<button id="buttontwo" class="stylebeta">Style Me Too</button>
+
+                    </div>
+                </div>
+            </div>
+
+			<!-- jQuery Interactive -->
+			<script type="text/javascript">
+				$(document).ready(function () {
+					
+					$('button#buttonfour').hide();
+						
+					$('button#buttonthree').click(function () {
+					
+						$(this).hide();	
+						$('button#buttonfour').show();
+						
+					});
+							
+				});
+			</script>
+			<div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">jQuery Interactive</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <button id="buttonthree">Klik wa</button>
+						<button id="buttonfour">Hi bre!</button>
+
+                    </div>
+                </div>
+            </div>
+
+			<script type="text/javascript">
+				$(document).ready(function () {
+								
+					$('button#sendvote').click(function () {
+						
+						var nama = $('#nama').val();
+						var pesan = $('#pesan').val();
+					
+						$.post('api/data', { name: nama, messages: pesan })
+							.done(function (data) {
+												
+								$('p#pesanresponse').html(data);
+								
+							});
+									
+					});
+							
+				});
+			</script>
+			<div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">jQuery HTTP Post</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+
+                        <form>
+							<strong>Kirim pesan :</strong><br>
+							<label for="name">Nama</label>
+							<input class="form-control" id="nama" type="text" placeholder="Name">
+							<br>
+							<label for="pesan">Pesan</label>
+							<input class="form-control" id="pesan" type="text" placeholder="Pesan">
+							
+							<button id="sendvote" type="submit">Kirim Pesan</button>
+							
+							<div class="result">
+								<strong>Result : </strong>
+								<p id="pesanresponse"></p>
+							</div>
+						</form>
+
+                    </div>
+                </div>
+            </div>
+		</div>
+
+	</div>
+</div>
